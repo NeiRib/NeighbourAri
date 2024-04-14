@@ -1,0 +1,225 @@
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    padding-top:60px;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+.centrar {
+  margin: auto;
+  width: 50%;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 10px;
+}
+
+
+h1 {
+  text-align:center;
+  color: #dae1e4;
+}
+
+h1 small {font-size:16px;}
+
+p {
+	margin: auto;
+}
+
+.large {
+	font-size: 3rem;
+}
+
+.small {
+	font-size: 2rem;
+}
+.otro{
+    font-size: 5rem;
+}
+
+.rise {
+	text-shadow: -0.01em -0.01em 0.01em #000;
+	animation: rise 2s ease-in-out 0.5s forwards;
+}
+
+@keyframes rise {
+	to {
+		text-shadow: 0em 0.01em #ff5, 0em 0.02em #ff5, 0em 0.02em 0.03em #ff5,
+			-0.01em 0.01em #fffdfde8, -0.02em 0.02em #333, -0.03em 0.03em #333,
+			-0.04em 0.04em #333, -0.01em -0.01em 0.03em #000, -0.02em -0.02em 0.03em #000,
+			-0.03em -0.03em 0.03em #000;
+		transform: translateY(-0.025em) translateX(0.04em);
+	}
+}
+
+.outline {
+	background-clip: text;
+	color: #9b1689;
+	animation: outline 1s ease-in-out 1.5s forwards;
+}
+
+@keyframes outline {
+	from {
+		text-shadow: 0em -7em 10em #fff;
+	}
+	to {
+		text-shadow: 0 0.02em #fff, 0.02em 0 #fff, -0.02em 0 #fff, 0 -0.02em #fff;
+	}
+}
+    </style>
+    <script>
+        //0. Shows the spoiler containers only when all scripts are loaded.
+$( document ).ready(function() {
+    $(".spoiler").show();
+});
+
+//1, Hide spoiler
+$( ".spoiler span").hide();
+//2, Add a button
+$( ".spoiler" ).append( "<button>Show spoiler!</button>" );
+//3, When button pressed
+$( "button" ).click(function(){
+   //3.1, Show spoiler next to the button clicked
+  $( this ).prev().fadeIn(1500);
+  //3.2, Hide button
+  $( this ).hide();
+});
+
+//4. When the spoiler text is pressed
+$( "span" ).click(function(){
+  //4.1 Hide the spoiler text.
+   $( this ).hide().fadeOut;
+  //4.2 Show the button
+   $( this ).next().fadeIn();
+});
+    </script>
+</head>
+<body>
+  <div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+
+
+
+
+  <br/>
+ <center><p class="otro rise">The Neighbourhood:</p></center>
+
+  <br/>  <div class="centrar"> 
+    <center><p class="large rise">Top 3</p>
+    <p class="small outline">Sorry, era imposible decidir aquí, me cuesta mucho poner una encima de otra, así que:</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2u0CelO5c81XS7z3dGpHbS?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2xql0pid3EUwW38AsywxhV?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</center></div>
+
+  <br/>  <div class="centrar"> 
+    <center><p class="large rise">Top 2</p>
+    <p class="small outline">Esta es especial, porque literalmente no te puedo sacar de mi mente cada vez que está sonando, está ancladísima a tí.</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0Ot6e3wYVQQ1Us9PM977jE?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</center>
+  </div>
+
+  <br/>  <div class="centrar"> 
+    <center><p class="large rise">Top 1</p>
+    <center><p class="small outline">Creo que aquí no hay sorpresa. Te odio por ella >:3</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7brQHA2CgQpcMBiOlfiXYb?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </center>
+  </div>
+
+  <br/><br/><br/>
+  <center><p class="otro rise">Ariana Grande:</p></center>
+
+  <br/>  <div class="centrar"> 
+    <center><p class="large rise">Top 3</p>
+    <p class="small outline">Ufffff esos drops me golpean duro~</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/44ONERBHALxftQNWq6dmyd?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</center></div>
+
+  <br/>  <div class="centrar"> 
+    <center><p class="large rise">Top 2</p>
+    <p class="small outline">A parte de gustarme mucho, literalmente me describe contigo, hambriento de tu atención siempre.</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1TEL6MlSSVLSdhOSddidlJ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</center>
+  </div>
+
+  <br/>  <div class="centrar"> 
+    <center><p class="large rise">Top 1</p>
+    <center><p class="small outline"> Por obvias razones. </p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6XXKB32Om6WuXg3uEWwTob?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </center>
+  </div>
+
+  <br/><br/><br/>
+  
+</body>
